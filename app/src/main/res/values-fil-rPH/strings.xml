@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TravelBlog_LoginScreen</string>
+    <string name="welcome">Maligayang Pagdating</string>
+    <string name="login">Mag login</string>
+    <string name="new_to_site">Bago sa site?</string>
+    <string name="register">Mag-rehistro</string>
+    <string name="log_in_attempts_remaining_5">Natitirang pagtangkang mag login: 5</string>
+</resources>
