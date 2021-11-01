@@ -6,4 +6,11 @@
     <string name="new_to_site">Bago sa site?</string>
     <string name="register">Mag-rehistro</string>
     <string name="log_in_attempts_remaining_5">Natitirang pagtangkang mag login: 5</string>
+    <string name="forgot_password">Nakalimutan ang password?</string>
+    <string name="new_password">Bagong Password</string>
+    <string name="reset_password">I-reset ang Password</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Kumpirmahin ang Password</string>
+    <string name="password">Password</string>
+    <string name="email_address">Email Address</string>
 </resources>
