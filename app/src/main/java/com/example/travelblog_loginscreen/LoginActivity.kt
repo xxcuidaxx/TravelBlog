@@ -25,11 +25,12 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.Password)
         val loginbutton = findViewById<Button>(R.id.Login)
         val regist = findViewById<Button>(R.id.button_Register)
+        val forpass = findViewById<TextView>(R.id.fpass)
         val rem = findViewById<TextView>(R.id.loginrem)
         var loginrem = 5
 
 
-        rem.setText("No of attempts remaining: 5")
+        rem.setText("No. of attempts remaining: 5")
 
 
         loginbutton.setOnClickListener {
@@ -40,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
             when {
                 emailStr.length == 0 ->{
                     loginrem--;
-                    rem.setText("No of attempts remaining: " + loginrem.toString())
+                    rem.setText("No. of attempts remaining: " + loginrem.toString())
                     if (loginrem == 0){
                         loginbutton.isEnabled = false;
                     }
@@ -48,16 +49,16 @@ class LoginActivity : AppCompatActivity() {
                     loginbutton.startAnimation (shake);}
                 !EMAILREGEX.matcher(emailStr).find() ->{
                     loginrem--;
-                    rem.setText("No of attempts remaining: " + loginrem.toString())
+                    rem.setText("No. of attempts remaining: " + loginrem.toString())
                     if (loginrem == 0){
                         loginbutton.isEnabled = false;
                     }
                     Snackbar.make(email,"Enter a valid email address",Snackbar.LENGTH_LONG).show()
                     loginbutton.startAnimation (shake);
                     }
-                passStr != "?anything" ->{
+                passStr != "admin123" ->{
                     loginrem--;
-                    rem.setText("No of attempts remaining: " + loginrem.toString())
+                    rem.setText("No. of attempts remaining: " + loginrem.toString())
                     if (loginrem == 0){
                         loginbutton.isEnabled = false;
                     }
@@ -73,6 +74,13 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, Register_Activity::class.java)
             startActivity(intent)
         }
+
+        forpass.setOnClickListener{
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+
+        }
+
     }
 
 
