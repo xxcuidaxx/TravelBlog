@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelBlog_LoginScreen">
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.TravelBlog_LoginScreen.NoActionBar" />
+        <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
         <activity

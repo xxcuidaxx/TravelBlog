@@ -65,10 +65,6 @@ class Register_Activity : AppCompatActivity() {
                 regpassword.setText("")
                 regconfpassword.setText("")
 
-
-
-
-
         }
 
         reglogin.setOnClickListener {

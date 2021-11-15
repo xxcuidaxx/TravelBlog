@@ -9,8 +9,8 @@
     <string name="forgot_password">Nakalimutan ang password?</string>
     <string name="new_password">Bagong Password</string>
     <string name="reset_password">I-reset ang Password</string>
-    <string name="email">Email</string>
+    <string name="email">Ilagay ang Email</string>
     <string name="confirm_password">Kumpirmahin ang Password</string>
-    <string name="password">Password</string>
-    <string name="email_address">Email Address</string>
+    <string name="password">Ilagay ang password</string>
+    <string name="email_address">Ilagay ang Email Address</string>
 </resources>
