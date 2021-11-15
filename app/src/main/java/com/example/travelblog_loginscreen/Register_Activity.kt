@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
@@ -22,14 +23,18 @@ class Register_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        val fab: View = findViewById(R.id.fab)
         val reglogin = findViewById<Button>(R.id.reg_login)
-        val reg = findViewById<Button>(R.id.button_reg)
         val regemail = findViewById<EditText>(R.id.reg_email)
         val regpassword = findViewById<EditText>(R.id.reg_pass)
         val regconfpassword = findViewById<EditText>(R.id.reg_confpass)
 
 
-        reg.setOnClickListener {
+        reglogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+        fab.setOnClickListener { view ->
             val regemailstr = regemail.text.toString()
             val regpassstr = regpassword.text.toString()
             val regconfpassstr = regconfpassword.text.toString()
@@ -39,14 +44,14 @@ class Register_Activity : AppCompatActivity() {
             when {
                 regemailstr.length == 0 ->{
                     Snackbar.make(regemail, "Email address needed",Snackbar.LENGTH_LONG).show()
-                    reg.startAnimation (shake);}
+                    fab.startAnimation (shake);}
                 !EMAILREGEX.matcher(regemailstr).find() ->{
                     Snackbar.make(regemail,"Enter a valid email address",Snackbar.LENGTH_LONG).show()
-                    reg.startAnimation (shake); }
+                    fab.startAnimation (shake); }
                 regconfpassstr != regpassstr ->{
                     Snackbar.make(regpassword, "Password do not match",Snackbar.LENGTH_LONG).show()
                     regconfpassword.setText("")
-                    reg.startAnimation (shake);}
+                    fab.startAnimation (shake);}
                 regpassword.text.isEmpty() ->{
                     Toast.makeText(this, "Please fill up the form!", Toast.LENGTH_SHORT).show();}
                 regconfpassword.text.isEmpty() ->{
@@ -60,17 +65,18 @@ class Register_Activity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill up the form!", Toast.LENGTH_SHORT).show(); }
             else if (regconfpassword.text.isEmpty()){
                 Toast.makeText(this, "Please fill up the form!", Toast.LENGTH_SHORT).show(); }
-            else
+            else{
                 regemail.setText("")
                 regpassword.setText("")
                 regconfpassword.setText("")
+                val mainIntent = Intent(this@Register_Activity, MainActivity::class.java )
+                mainIntent.putExtra("EMAIL", regemailstr)
+                startActivity(mainIntent)
+                finish()
+            }
 
-        }
-
-        reglogin.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
         }
 
     }
+
 }

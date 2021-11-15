@@ -29,9 +29,7 @@ class LoginActivity : AppCompatActivity() {
         val rem = findViewById<TextView>(R.id.loginrem)
         var loginrem = 5
 
-
         rem.setText("No. of attempts remaining: 5")
-
 
         loginbutton.setOnClickListener {
             val emailStr = email.text.toString()
@@ -68,6 +66,9 @@ class LoginActivity : AppCompatActivity() {
             } else ->
                 Snackbar.make(email,"Login successfull", Snackbar.LENGTH_SHORT).show()
                 }
+            val mainIntent = Intent(this@LoginActivity, MainActivity::class.java)
+            mainIntent.putExtra("EMAIL", emailStr)
+            startActivity(mainIntent)
         }
 
         regist.setOnClickListener {

@@ -25,8 +25,6 @@ class ForgotPasswordActivity : AppCompatActivity() {
         resetpass.setText("Check email")
 
 
-
-
         resetpass.setOnClickListener {
 
             val foremailstr = foremail.text.toString()
@@ -45,8 +43,15 @@ class ForgotPasswordActivity : AppCompatActivity() {
                     Snackbar.make(foremail, "Password has been reset successfully", Snackbar.LENGTH_LONG).show()
                     foremail.setText("")
                     forpassword.setText("")
+                    val mainIntent = Intent(this@ForgotPasswordActivity, MainActivity::class.java)
+                    mainIntent.putExtra("EMAIL", foremailstr)
+                    startActivity(mainIntent)
+                    finish()
                 }
+
+
             }
+
         }
 
         forlog.setOnClickListener {

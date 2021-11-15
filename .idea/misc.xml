@@ -4,10 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/drawable/image.xml" value="0.12604166666666666" />
-        <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/layout/activity_forgot_password.xml" value="0.17" />
+        <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
         <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/layout/activity_main.xml" value="0.21557971014492755" />
-        <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/layout/activity_register.xml" value="0.20279720279720279" />
+        <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/layout/activity_register2.xml" value="0.1417763157894737" />
+        <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/layout/content_main.xml" value="0.1417763157894737" />
+        <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/layout/fragment_first.xml" value="0.15" />
+        <entry key="..\:/Users/Windows/AndroidStudioProjects/TravelBlog_LoginScreen/app/src/main/res/menu/menu_main.xml" value="0.21" />
       </map>
     </option>
   </component>
