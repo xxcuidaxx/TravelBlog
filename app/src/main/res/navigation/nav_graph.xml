@@ -3,26 +3,73 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
-
+    app:startDestination="@id/loginFragment2">
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.travelblog_loginscreen.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/loginFragment2"
+        android:name="com.example.travelblog_loginscreen.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/activity_login">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment3" />
+        <action
+            android:id="@+id/action_login_to_main"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_login_to_forgot"
+            app:destination="@id/forgotPasswordFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.travelblog_loginscreen.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/registerFragment3"
+        android:name="com.example.travelblog_loginscreen.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/activity_register">
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_register_to_main"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/registerFragment3"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/loginFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.travelblog_loginscreen.MainFragment"
+        tools:layout="@layout/activity_main">
+        <action
+            android:id="@+id/action_main_to_login"
+            app:destination="@id/loginFragment2"
+            app:popUpTo="@id/loginFragment2"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="String"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_main_to_forgot"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_main_to_register"
+            app:destination="@id/registerFragment3" />
+        <action
+            android:id="@+id/action_main_to_camera"
+            app:destination="@id/travelCamera" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.travelblog_loginscreen.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/activity_forgot_password">
+        <action
+            android:id="@+id/action_forgot_to_login"
+            app:destination="@id/loginFragment2" />
+        <action
+            android:id="@+id/action_forgot_to_main"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/travelCamera"
+        android:name="com.example.travelblog_loginscreen.TravelCamera"
+        android:label="Camera"
+        tools:layout="@layout/activity_camera" />
 </navigation>

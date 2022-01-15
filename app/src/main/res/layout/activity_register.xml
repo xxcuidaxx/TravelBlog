@@ -5,19 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mycolor"
-    tools:context=".Register_Activity">
-
-    <EditText
-        android:id="@+id/reg_confpass"
-        android:layout_width="371dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="60dp"
-        android:ems="10"
-        android:hint="@string/confirm_password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button_reg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    tools:context=".RegisterFragment">
 
     <TextView
         android:id="@+id/tv_register"
@@ -34,12 +22,13 @@
 
     <EditText
         android:id="@+id/reg_email"
-        android:layout_width="371dp"
+        android:layout_width="300dp"
         android:layout_height="47dp"
         android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/reg_pass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,41 +36,69 @@
 
     <EditText
         android:id="@+id/reg_pass"
-        android:layout_width="371dp"
+        android:layout_width="300dp"
         android:layout_height="49dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/reg_confpass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button_reg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="180dp"
-        android:backgroundTint="#b2dbbf"
-        android:text="@string/register"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/reg_confpass"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/reg_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/reg_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
         android:backgroundTint="#b2dbbf"
         android:text="@string/login"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_baseline_done_24"
+        app:backgroundTint="#b2dbbf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_login"
+        app:layout_constraintVertical_bias="0.718"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/reg_username"
+        android:layout_width="300dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/reg_email"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_reg"
-        app:layout_constraintVertical_bias="0.25" />
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
